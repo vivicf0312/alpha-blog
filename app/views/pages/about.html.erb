@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML Practice </title>
+  <style>
+  hr {
+    margin-top: 2em;
+    border-width: 3px
+  }
+  #parent {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 200px;
+    }
+   p, h1 {
+     font-family: "Comic Sans MS"
+   }
+  </style>
+</head>
+
+<body>
+  <h1 align="center">About Alpha-Blog</h1>
+  <%= link_to 'Home', root_path%>
+  <div style="width:100%;height:200px"><img src=  "/assets/pattern.jpg" style="width:100%;height:200px"></div>
+  <hr>
+  <div id="parent">
+    <p>This is a blog for students who are learning Rails!</p>
+  </div>
+</body>
+
+</html>
