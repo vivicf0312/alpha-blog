@@ -1,4 +1,18 @@
 class User < ActiveRecord::Base
+
+  #############
+  #ASOCIATIONS#
+  #############
+  has_many :articles
+
+  ############
+  #CALL BACKS#
+  ############
+  before_save { self.email = email.downcase }
+
+  #############
+  #VALIDATIONS#
+  #############
   validates :username, presence: true,
             uniqueness: { case_sensitive: false },
             length: { minimum: 3, maximum: 25 }
