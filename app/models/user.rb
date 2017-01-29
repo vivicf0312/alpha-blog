@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   #############
   #ASOCIATIONS#
   #############
-  has_many :articles
+  has_many :articles, dependent: :destroy
 
   ############
   #CALL BACKS#
